@@ -1,13 +1,13 @@
 import pandas as pd
 import os
 hru={}
-Years=[1990,2000,2006,2012,2018]
-col=['SUBBASIN','HRU','LANDUSE','SOIL','SLOPE_CD','HRU_FR']
-hru[1990]= pd.read_csv("lu1990.csv",usecols=col) # e.g. HRU info with land use in 1990
-hru[2000]= pd.read_csv("lu2000.csv",usecols=col)    # e.g. HRU info with land use in 2000  
-hru[2006]= pd.read_csv("lu2006.csv",usecols=col)    # e.g. HRU info with land use in 2000  
-hru[2012]= pd.read_csv("lu2012.csv",usecols=col)    # e.g. HRU info with land use in 2000  
-hru[2018] = pd.read_csv("lu2018.csv",usecols=col)    # e.g. HRU info with land use in 2018
+Years=[1990,2000,2006,2012,2018]# years of land use hrus in SWAT model
+col=['SUBBASIN','HRU','LANDUSE','SOIL','SLOPE_CD','HRU_FR']# only this columns
+hru[1990]= pd.read_csv("lu1990.csv",usecols=col) # e.g. HRU info with land use in 1990 from access or sql hrus file
+hru[2000]= pd.read_csv("lu2000.csv",usecols=col) # e.g. HRU info with land use in 2000  
+hru[2006]= pd.read_csv("lu2006.csv",usecols=col) # e.g. HRU info with land use in 2006  
+hru[2012]= pd.read_csv("lu2012.csv",usecols=col) # e.g. HRU info with land use in 2012  
+hru[2018] = pd.read_csv("lu2018.csv",usecols=col) # e.g. HRU info with land use in 2018
 b=Years[0]
 nsubs=max(hru[b]['SUBBASIN'])
 col1=col
