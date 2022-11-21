@@ -1,6 +1,6 @@
-import pandas as pd
 import os
-hru={}
+import pandas as pd
+hru={} # a list of hrus for the existing land use maps and created by individual SWAT model
 Years=[1990,2000,2006,2012,2018]# years of land use hrus in SWAT model
 hrucsv=["lu1990.csv","lu2000.csv","lu2006.csv","lu2012.csv","lu2018.csv"]
 col=['SUBBASIN','HRU','LANDUSE','SOIL','SLOPE_CD','HRU_FR']# only this columns
